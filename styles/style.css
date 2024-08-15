@@ -7,6 +7,7 @@
     --very-dark-blue: #1C204B;
 
     --border-radius: 0.938rem; /* 15px */ 
+    --white-color-text: #fff;
 }
 
 * {
@@ -25,6 +26,10 @@ main {
     display: grid;
 }
 
+.l-flex {
+    display: flex;
+}
+
 .hero__container {
     background-color: var(--very-dark-blue);
     border-radius: var(--border-radius);
@@ -33,16 +38,32 @@ main {
 .hero__info {
     border-radius: var(--border-radius);
     background-color: #5747EA;
-    grid-template-columns: 30% 70%;
     padding: var(--spacing-32);
+    align-items: center;
 }
 
 .hero__photo {
     border-radius: 50%;
     border: 3px solid white;
     max-width: 4rem;
+    margin-right: 1.25rem;
 }
 
 .hero__details {
     
+}
+/* styles for text */
+.regular-small-text {
+    font-size: 0.938rem;
+    font-weight: 400;
+    color: #BBC0FF;
+}
+
+.white-text {
+    color: white;
+}
+
+.hero__name {
+    font-size: 1.5rem;
+    font-weight: 100;
 }
