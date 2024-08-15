@@ -1,0 +1,16 @@
+:root {
+    --spacing-81: 5.063rem;
+    --spacing-24: 1.5rem;
+
+    --very-dark-blue: #1C204B;
+}
+
+* {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: var(--spacing-81) var(--spacing-24);
+}
