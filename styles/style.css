@@ -5,6 +5,7 @@
 
     --bg-page: #0E1323;
     --very-dark-blue: #1C204B;
+    --nav-text-color: #7078C9;
 
     --border-radius: 0.938rem; /* 15px */ 
     --white-color-text: #fff;
@@ -66,4 +67,19 @@ main {
 .hero__name {
     font-size: 1.5rem;
     font-weight: 100;
+}
+
+.hero__navigation {
+    justify-content: space-evenly;
+    font-size: 1.125rem;
+}
+
+.hero__navigation_item {
+    color: var(--nav-text-color);
+    cursor: pointer;
+    padding: var(--spacing-24);
+}
+
+.nav-item--chosen {
+    color: white;
 }
