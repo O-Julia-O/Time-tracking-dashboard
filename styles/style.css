@@ -1,6 +1,7 @@
 :root {
     --spacing-81: 5.063rem;/* 81px */
     --spacing-24: 1.5rem; /* 24px */
+    --spacing-32: 2rem; /* 32px */
 
     --bg-page: #0E1323;
     --very-dark-blue: #1C204B;
@@ -20,6 +21,10 @@ main {
     padding: var(--spacing-81) var(--spacing-24);
 }
 
+.l-grid {
+    display: grid;
+}
+
 .hero__container {
     background-color: var(--very-dark-blue);
     border-radius: var(--border-radius);
@@ -28,10 +33,16 @@ main {
 .hero__info {
     border-radius: var(--border-radius);
     background-color: #5747EA;
+    grid-template-columns: 30% 70%;
+    padding: var(--spacing-32);
 }
 
 .hero__photo {
     border-radius: 50%;
     border: 3px solid white;
     max-width: 4rem;
+}
+
+.hero__details {
+    
 }
