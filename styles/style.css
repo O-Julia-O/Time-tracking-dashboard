@@ -1,9 +1,11 @@
 :root {
-    --spacing-81: 5.063rem;
-    --spacing-24: 1.5rem;
+    --spacing-81: 5.063rem;/* 81px */
+    --spacing-24: 1.5rem; /* 24px */
 
     --bg-page: #0E1323;
     --very-dark-blue: #1C204B;
+
+    --border-radius: 0.938rem; /* 15px */ 
 }
 
 * {
@@ -19,9 +21,11 @@ main {
 
 .hero__container {
     background-color: var(--very-dark-blue);
+    border-radius: var(--border-radius);
 }
 
 .hero__info {
+    border-radius: var(--border-radius);
     background-color: #5747EA;
 }
 
