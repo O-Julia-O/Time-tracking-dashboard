@@ -2,6 +2,7 @@
     --spacing-81: 5.063rem;
     --spacing-24: 1.5rem;
 
+    --bg-page: #0E1323;
     --very-dark-blue: #1C204B;
 }
 
@@ -12,5 +13,18 @@
 }
 
 main {
+    background-color: var(--bg-page);
     padding: var(--spacing-81) var(--spacing-24);
+}
+
+.hero__container {
+    background-color: var(--very-dark-blue);
+}
+
+.hero__info {
+    background-color: #5747EA;
+}
+
+.hero__photo {
+    max-width: 4rem;
 }
