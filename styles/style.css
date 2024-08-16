@@ -34,6 +34,7 @@ main {
 .hero__container {
     background-color: var(--very-dark-blue);
     border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-24);
 }
 
 .hero__info {
@@ -64,6 +65,10 @@ main {
     color: white;
 }
 
+.light-blue {
+    color: #BBC0FF;
+}
+
 .hero__name {
     font-size: 1.5rem;
     font-weight: 100;
@@ -82,4 +87,66 @@ main {
 
 .nav-item--chosen {
     color: white;
+}
+
+.cards {
+    flex-direction: column;
+    gap: var(--spacing-24);
+}
+
+.card__item {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.card__container {
+    position: relative;
+    background-color: #FF8B64;
+}
+
+.card-bg {
+    height: 2.5rem;
+}
+
+.card__text {
+    position: relative;
+    background-color: var(--very-dark-blue);
+    padding: 28px var(--spacing-24);
+    border-radius: var(--border-radius);
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; 
+
+    align-items: center;
+
+    gap: 6px 0;
+
+    z-index: 2;
+}
+
+.card__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.card__menu--dots {
+    display: inline-flex;
+    justify-self: flex-end;
+}
+
+.card__title {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.card__text-curr-time {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.card__text-prev-time {
+    text-align: right;
+    font-size: 0.938rem;
 }
