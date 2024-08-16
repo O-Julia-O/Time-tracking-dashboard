@@ -24,7 +24,7 @@ promise
     /* iterating all data */
     data.forEach((card) => {
       /* create card for every element */
-      createCard(card.title, card.timeframes);
+      updateCards(card.title, card.timeframes);
     });
   })
   .catch((error) => {
@@ -36,29 +36,27 @@ menuItems.forEach((item) => {
   item.addEventListener("click", (e) => {
     const itemText = e.currentTarget.textContent.toLowerCase();
     console.log(itemText);
+    containerCards.innerHTML = "";
 
-    switch (itemText) {
-        case "daily":
-          
-          break;
-        case "monthly":
-          
-          break;
-        
-        default:
-          
-          break;
-      }
+    promise
+      .then((data) => {
+        data.forEach((card) => {
+          updateCards(card.title, card.timeframes, itemText);
+        });
+      })
+      .catch((error) => {
+        console.error(`Could not get cards: ${error}`);
+      });
   });
 });
 
-/* Creating cards */
-function createCard(title, timeframes) {
-  /* create element */
-  const newCard = document.createElement("li");
+/* Updating cards */
+function updateCards(title, timeframe, time = "weekly") {
+    const newCard = document.createElement("li");
+    newCard.classList.add("card__item")
+ 
   /* inner html in new card */
   newCard.innerHTML = `
-        <li class="card__item">
           <article class="card card__container bg--${title
             .replace(/\s/g, "")
             .toLowerCase()}">
@@ -79,14 +77,13 @@ function createCard(title, timeframes) {
                 alt="three dots icon, maybe menu"
               />
               <p class="card__text-curr-time white-text"><span>${
-                timeframes.weekly.current
+                timeframe[time].current
               }</span> hrs</p>
-              <p class="card__text-prev-time light-blue">Last week <span>${
-                timeframes.weekly.previous
+              <p class="card__text-prev-time light-blue">Previous <span>${
+                timeframe[time].previous
               }</span> hrs</p>
             </div>
           </article>
-        </li>
     `;
 
   containerCards.appendChild(newCard);
