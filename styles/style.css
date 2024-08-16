@@ -96,11 +96,11 @@ main {
 
 .card__item {
     border-radius: var(--border-radius);
-    overflow: hidden;
 }
 
 .card__container {
     position: relative;
+    border-radius: 1rem;
 }
 
 .bg--work {
