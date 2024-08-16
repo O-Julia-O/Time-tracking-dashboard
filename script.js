@@ -1,14 +1,6 @@
-/* const fetchPromise = fetch("./data.json");
-
-fetchPromise.then((response) => {
-    const jsonPromise = response.json();
-    jsonPromise.then((data) => {
-      console.log(data[0].title);
-    });
-}); */
-
 /* getting container fron html */
 const containerCards = document.getElementById("cards");
+const menuItems = document.querySelectorAll(".hero__navigation_item");
 
 async function fetchData() {
   /* creating fetch */
@@ -31,7 +23,7 @@ promise
     console.log(data);
     /* iterating all data */
     data.forEach((card) => {
-        /* create card for every element */
+      /* create card for every element */
       createCard(card.title, card.timeframes);
     });
   })
@@ -39,16 +31,42 @@ promise
     console.error(`Could not get cards: ${error}`);
   });
 
+/* adding listener to navigation */
+menuItems.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const itemText = e.currentTarget.textContent.toLowerCase();
+    console.log(itemText);
+
+    switch (itemText) {
+        case "daily":
+          
+          break;
+        case "monthly":
+          
+          break;
+        
+        default:
+          
+          break;
+      }
+  });
+});
+
+/* Creating cards */
 function createCard(title, timeframes) {
-    /* create element */
+  /* create element */
   const newCard = document.createElement("li");
   /* inner html in new card */
   newCard.innerHTML = `
         <li class="card__item">
-          <article class="card card__container bg--${title.replace(/\s/g, '').toLowerCase()}">
+          <article class="card card__container bg--${title
+            .replace(/\s/g, "")
+            .toLowerCase()}">
             <div class="card-bg">
               <img
-                src="./images/icon-${title.replace(/\s/g, '').toLowerCase()}.svg"
+                src="./images/icon-${title
+                  .replace(/\s/g, "")
+                  .toLowerCase()}.svg"
                 alt="Exercise Icon"
                 class="card__icon"
               />
@@ -60,8 +78,12 @@ function createCard(title, timeframes) {
                 src="./images/icon-ellipsis.svg"
                 alt="three dots icon, maybe menu"
               />
-              <p class="card__text-curr-time white-text"><span>${timeframes.weekly.current}</span> hrs</p>
-              <p class="card__text-prev-time light-blue">Last week <span>${timeframes.weekly.previous}</span> hrs</p>
+              <p class="card__text-curr-time white-text"><span>${
+                timeframes.weekly.current
+              }</span> hrs</p>
+              <p class="card__text-prev-time light-blue">Last week <span>${
+                timeframes.weekly.previous
+              }</span> hrs</p>
             </div>
           </article>
         </li>
