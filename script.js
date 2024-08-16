@@ -34,6 +34,10 @@ promise
 /* adding listener to navigation */
 menuItems.forEach((item) => {
   item.addEventListener("click", (e) => {
+    menuItems.forEach((item) => {
+        item.classList.remove("nav-item--chosen");
+    })
+    e.currentTarget.classList.add("nav-item--chosen");
     const itemText = e.currentTarget.textContent.toLowerCase();
     console.log(itemText);
     containerCards.innerHTML = "";
