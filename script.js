@@ -45,10 +45,10 @@ function createCard(card) {
   /* inner html in new card */
   newCard.innerHTML = `
         <li class="card__item">
-          <article class="card card__container">
+          <article class="card card__container bg--${card.title.replace(/\s/g, '').toLowerCase()}">
             <div class="card-bg">
               <img
-                src="./images/icon-${card.title.toLowerCase()}.svg"
+                src="./images/icon-${card.title.replace(/\s/g, '').toLowerCase()}.svg"
                 alt="Exercise Icon"
                 class="card__icon"
               />

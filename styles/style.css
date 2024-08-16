@@ -101,11 +101,40 @@ main {
 
 .card__container {
     position: relative;
+}
+
+.bg--work {
     background-color: #FF8B64;
+}
+
+.bg--ellipsis {
+    background-color: #FF8B64;
+}
+
+.bg--exercise {
+    background-color: #4BCF82;
+}
+
+.bg--play {
+    background-color: #55C2E6;
+}
+
+.bg--selfcare {
+    background-color: #F1C75B;
+}
+
+.bg--social {
+    background-color: #7335D2;
+}
+
+.bg--study {
+    background-color: #FF5E7D;
 }
 
 .card-bg {
     height: 2.5rem;
+    
+    
 }
 
 .card__text {
