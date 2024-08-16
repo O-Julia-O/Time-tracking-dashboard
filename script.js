@@ -32,36 +32,36 @@ promise
     /* iterating all data */
     data.forEach((card) => {
         /* create card for every element */
-      createCard(card);
+      createCard(card.title, card.timeframes);
     });
   })
   .catch((error) => {
     console.error(`Could not get cards: ${error}`);
   });
 
-function createCard(card) {
+function createCard(title, timeframes) {
     /* create element */
   const newCard = document.createElement("li");
   /* inner html in new card */
   newCard.innerHTML = `
         <li class="card__item">
-          <article class="card card__container bg--${card.title.replace(/\s/g, '').toLowerCase()}">
+          <article class="card card__container bg--${title.replace(/\s/g, '').toLowerCase()}">
             <div class="card-bg">
               <img
-                src="./images/icon-${card.title.replace(/\s/g, '').toLowerCase()}.svg"
+                src="./images/icon-${title.replace(/\s/g, '').toLowerCase()}.svg"
                 alt="Exercise Icon"
                 class="card__icon"
               />
             </div>
             <div class="card__text l-grid">
-              <h1 class="card__title white-text">${card.title}</h1>
+              <h1 class="card__title white-text">${title}</h1>
               <img
                 class="card__menu--dots"
                 src="./images/icon-ellipsis.svg"
                 alt="three dots icon, maybe menu"
               />
-              <p class="card__text-curr-time white-text"><span>32</span> hrs</p>
-              <p class="card__text-prev-time light-blue">Last week <span>36</span> hrs</p>
+              <p class="card__text-curr-time white-text"><span>${timeframes.weekly.current}</span> hrs</p>
+              <p class="card__text-prev-time light-blue">Last week <span>${timeframes.weekly.previous}</span> hrs</p>
             </div>
           </article>
         </li>
