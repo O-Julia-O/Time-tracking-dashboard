@@ -34,6 +34,7 @@ main {
 .hero__container {
     background-color: var(--very-dark-blue);
     border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-24);
 }
 
 .hero__info {
@@ -110,6 +111,9 @@ main {
     border-radius: var(--border-radius);
 
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; 
+
+    gap: 6px 0;
 
     z-index: 2;
 }
@@ -119,4 +123,13 @@ main {
     right: 0;
     top: 0;
     z-index: 1;
+}
+
+.card__menu--dots {
+    display: inline-flex;
+    justify-self: flex-end;
+}
+
+.card__text-prev-time {
+    text-align: right;
 }
