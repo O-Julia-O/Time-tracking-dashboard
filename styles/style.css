@@ -83,3 +83,38 @@ main {
 .nav-item--chosen {
     color: white;
 }
+
+.cards {
+    flex-direction: column;
+    gap: var(--spacing-24);
+}
+
+.card__item {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.card__container {
+    position: relative;
+    background-color: #FF8B64;
+}
+
+.card-bg {
+    height: 2.5rem;
+}
+
+.card__text {
+    position: relative;
+    background-color: var(--very-dark-blue);
+    padding: 28px var(--spacing-24);
+    border-radius: var(--border-radius);
+
+    z-index: 2;
+}
+
+.card__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
