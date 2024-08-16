@@ -109,6 +109,8 @@ main {
     padding: 28px var(--spacing-24);
     border-radius: var(--border-radius);
 
+    grid-template-columns: 1fr 1fr;
+
     z-index: 2;
 }
 
