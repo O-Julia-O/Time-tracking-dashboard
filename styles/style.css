@@ -117,6 +117,8 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr; 
 
+    align-items: center;
+
     gap: 6px 0;
 
     z-index: 2;
@@ -134,6 +136,17 @@ main {
     justify-self: flex-end;
 }
 
+.card__title {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.card__text-curr-time {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
 .card__text-prev-time {
     text-align: right;
+    font-size: 0.938rem;
 }
