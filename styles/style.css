@@ -212,6 +212,10 @@ main {
         max-width: 4.875rem;
     }
 
+    .hero__name {
+        font-size: 2.5rem;
+    }
+
     /* .hero__container { grid-area: menu; }
     .card__item:first-child { grid-area: box; }
     .card__item:nth-child(2) { grid-area: box2; }
