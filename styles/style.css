@@ -208,6 +208,10 @@ main {
         flex-direction: column;
     }
 
+    .hero__photo {
+        max-width: 4.875rem;
+    }
+
     /* .hero__container { grid-area: menu; }
     .card__item:first-child { grid-area: box; }
     .card__item:nth-child(2) { grid-area: box2; }
