@@ -194,6 +194,20 @@ main {
         grid-template-rows: 1fr 1fr;
     }
 
+    .hero__container {
+        max-width: 255px;
+        margin-right: 30px;
+    }
+
+    .hero__info {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hero__navigation {
+        flex-direction: column;
+    }
+
     /* .hero__container { grid-area: menu; }
     .card__item:first-child { grid-area: box; }
     .card__item:nth-child(2) { grid-area: box2; }
