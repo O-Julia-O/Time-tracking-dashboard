@@ -32,8 +32,8 @@ Mobile:
 
 ### Links
 
-- Solution URL: [https://github.com/O-Julia-O](https://github.com/O-Julia-O/Time-tracking-dashboard)
-- Live Site URL: 
+- Solution URL: https://github.com/O-Julia-O/Time-tracking-dashboard
+- Live Site URL: https://o-julia-o.github.io/Time-tracking-dashboard/
 
 ## My process
 
